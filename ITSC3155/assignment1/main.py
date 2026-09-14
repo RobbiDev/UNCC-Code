@@ -39,8 +39,7 @@ resources = {
 class SandwichMachine:
 
     def __init__(self, machine_resources):
-        """Receives resources as input.
-            Hint: bind input variable to self variable"""
+        """Receives resources as input. Hint: bind input variable to self variable"""
         self.machine_resources = machine_resources
 
     def check_resources(self, ingredients):
@@ -53,8 +52,7 @@ class SandwichMachine:
         return True
 
     def process_coins(self):
-        """Returns the total calculated from coins inserted.
-            Hint: include input() function here, e.g. input("how many quarters?: ")"""
+        """Returns the total calculated from coins inserted. Hint: include input() function here, e.g. input("how many quarters?: ")"""
         # ask user for coins
         print("Please insert coins.")
         dollars = int(input("how many large dollars?: ") or 0)
@@ -65,8 +63,7 @@ class SandwichMachine:
         return (dollars * 1.0) + (half_dollars * 0.5) + (quarters * 0.25) + (nickels * 0.05)
 
     def transaction_result(self, coins, cost):
-        """Return True when the payment is accepted, or False if money is insufficient.
-            Hint: use the output of process_coins() function for cost input"""
+        """Return True when the payment is accepted, or False if money is insufficient. Hint: use the output of process_coins() function for cost input"""
         # check if user paid enough
         if coins < cost:
             print("Sorry that's not enough money. Money refunded.")
@@ -77,8 +74,7 @@ class SandwichMachine:
         return True
 
     def make_sandwich(self, sandwich_size, order_ingredients):
-        """Deduct the required ingredients from the resources.
-            Hint: no output"""
+        """Deduct the required ingredients from the resources. Hint: no output"""
         # take away ingredients used
         for item, needed in order_ingredients.items():
             self.machine_resources[item] -= needed
