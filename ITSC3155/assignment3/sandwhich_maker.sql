@@ -43,7 +43,6 @@ insert into recipes (sandwich_size, item, amount) values
 ('large', 'ham', 8),
 ('large', 'cheese', 12);
 
--- check everything went in
 select * from resources;
 select * from sandwiches;
 select * from recipes;
